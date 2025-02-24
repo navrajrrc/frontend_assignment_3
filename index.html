@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Adventure Game</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<div id="game-container">
-			<h1>Your Adventure Game</h1>
-			<div id="question-container">
-				<p id="question">Your adventure begins now...</p>
-			</div>
-			<ul id="answers">
-				<!-- Answer buttons will be injected here by JavaScript -->
-			</ul>
-		</div>
-		<script src="script.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="game-container" role="main">
+      <h1>Your Adventure Game</h1>
+
+      <section id="question-container" aria-live="polite">
+        <p id="question" aria-labelledby="question-container">
+          Your adventure begins now...
+        </p>
+      </section>
+
+      <section id="choices" aria-labelledby="question">
+        <ul id="answers" role="list">
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
